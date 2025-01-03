@@ -1,19 +1,18 @@
 <?php
+use PHPMailer\PHPMailer\PHPMailer; 
+use PHPMailer\PHPMailer\SMTP;
 
-$name = $_POST["name"]; 
-$email = $_POST["email"]; 
-$message = $_POST["message"]; 
+$name = isset($_POST["name"]) ? $_POST["name"] : "";
+$email = isset($_POST["email"]) ? $_POST["email"] : "";
+$message = isset($_POST["message"]) ? $_POST["message"] : "";
 
 require "vendor/autoload.php"; 
 
 $dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
 $dotenv->load();
 
-$email_username = getenv('EMAIL_USERNAME');
-$email_password = getenv('EMAIL_PASSWORD');
-
-use PHPMailer\PHPMailer\PHPMailer; 
-use PHPMailer\PHPMailer\SMTP; 
+$email_username = getenv("EMAIL_USERNAME");
+$email_password = getenv("EMAIL_PASSWORD"); 
 
 $mail = new PHPMailer(true); 
 
