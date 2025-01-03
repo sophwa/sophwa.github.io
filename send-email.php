@@ -18,7 +18,6 @@ use PHPMailer\PHPMailer\SMTP;
 $mail = new PHPMailer(true); 
 
 try {
-    
     //Server Settings
     $mail->SMTPAuth = true;
     $mail-> Host = "smtp.gmail.com"; 
@@ -36,5 +35,7 @@ try {
     $mail->Body = $message;
 
     $mail->send(); 
-    echo("Message has been sent"); 
+    echo("Message has been sent!"); 
+} catch (Exception $e) {
+    echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
 }
