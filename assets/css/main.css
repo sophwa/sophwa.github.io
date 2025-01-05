@@ -3383,7 +3383,7 @@ input, select, textarea {
 		display: -webkit-flex;
 		display: -ms-flex;
 		display: flex;
-		padding: 6em 0 2em 0 ;
+		padding: 6em 0 2em 0 ; 
 		background-attachment: fixed;
 		background-position: center;
 		background-repeat: no-repeat;
@@ -3423,7 +3423,7 @@ input, select, textarea {
 		#banner h1 {
 			font-size: 3.25em;
 		}
-
+		
 		#banner > .inner {
 			display: flex;
 			justify-content: space-evenly;
@@ -3516,7 +3516,7 @@ input, select, textarea {
 		#banner.style6:after {
 			background-color: #87c5a4;
 		}
-
+	
 		body.is-preload #banner:after {
 			opacity: 1.0;
 		}
@@ -3532,6 +3532,37 @@ input, select, textarea {
 			transform: translateX(-0.5em);
 			opacity: 0;
 		}
+	
+		/* Targeting the page with .projects-page class */
+body.projects-page {
+    /* Banner styles */
+    #banner {
+        padding: 3.5em 0 2em 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* align-content is more for multi-line flexbox, align-items is typically what you want */
+    }
+
+    /* Inner container inside the banner */
+    #banner > .inner {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center; /* center items on the cross-axis */
+    }
+
+    /* Content inside the inner container */
+    .content {
+        display: flex;
+        flex-direction: column;
+    }
+
+    /* General styling for all children inside .content */
+    #banner > .inner .content > * {
+        margin-right: 0;
+        margin-bottom: 0;
+    }
+}
 
 		@media screen and (max-width: 1280px) {
 
@@ -3586,7 +3617,6 @@ input, select, textarea {
 				#banner.major {
 					padding: 8em 0 4em 0 ;
 				}
-
 		}
 
 /* Main */
