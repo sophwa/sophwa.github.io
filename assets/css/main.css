@@ -1770,7 +1770,7 @@ input, select, textarea {
 		width: max-content;
 		margin-bottom: 2em;
 	}
-		.role-container {
+		.spec-container {
 			margin-top: 7em;
 			display: flex;
 			flex-direction: row; 
@@ -1778,7 +1778,7 @@ input, select, textarea {
 			flex-wrap: wrap;
 		} 
 	
-		.role-values {
+		.spec-values {
 			align-items: center;
 			display: flex;
 			flex-direction: column; 
