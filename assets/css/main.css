@@ -1756,9 +1756,128 @@ input, select, textarea {
 						}
 
 		}
+/* Section/Article */
+section.special, article.special {
+    text-align: center;
+}
+
+header.major {
+    width: -moz-max-content;
+    width: -webkit-max-content;
+    width: -ms-max-content;
+    width: max-content;
+    margin-bottom: 2em;
+
+    > :first-child {
+        margin-bottom: 0;
+        width: calc(100% + 0.5em);
+
+        &::after {
+            content: '';
+            background-color: #ffffff;
+            display: block;
+            height: 2px;
+            margin: 0.325em 0 0.5em 0;
+            width: 100%;
+        }
+    }
+
+    > p {
+        font-size: 0.7em;
+        font-weight: 600;
+        letter-spacing: 0.25em;
+        margin-bottom: 0;
+        text-transform: uppercase;
+    }
+
+    body.is-ie & {
+        > :first-child::after {
+            max-width: 9em;
+        }
+
+        > h1::after {
+            max-width: 100% !important;
+        }
+    }
+}
+
+.spec-container {
+    margin-top: 7em;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    gap: 2em; 
+}
+
+.spec-values {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    padding: 1em;
+
+    p {
+        font-size: 1em;
+        font-weight: 600;
+        margin-bottom: 0.25em;
+		text-align: center;
+    }
+
+    .label {
+        font-size: 1.1em;
+        font-weight: 600;
+        color: #6fc3df;
+        text-transform: uppercase;
+        margin-bottom: 0.5em;
+    }
+}
+
+@media screen and (max-width: 736px) {
+    header.major > p br {
+        display: none; 
+    }
+
+    header.major > p {
+        font-size: 0.6em;
+        letter-spacing: 0.2em;
+    }
+
+    .spec-container {
+        flex-direction: column; 
+        align-items: center; 
+    }
+
+    .spec-values {
+        font-size: 0.9em; 
+        padding: 0.5em; 
+
+        .label {
+            font-size: 1em;
+            margin-bottom: 0.3em;
+        }
+
+        p {
+            margin-bottom: 0.5em; 
+        }
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .spec-container {
+        margin-top: 3em; 
+    }
+
+    .spec-values p {
+        font-size: 0.9em;
+    }
+
+    .spec-values .label {
+        font-size: 0.95em; 
+    }
+}
 
 /* Section/Article */
-
+/*
 	section.special, article.special {
 		text-align: center;
 	}
@@ -1776,6 +1895,7 @@ input, select, textarea {
 			flex-direction: row; 
 			justify-content: space-evenly;
 			flex-wrap: wrap;
+			gap: 2em;
 		} 
 	
 		.spec-values {
@@ -1832,7 +1952,7 @@ input, select, textarea {
 			display: none;
 		}
 
-	}
+	}*/
 
 /* Form */
 
