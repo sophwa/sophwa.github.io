@@ -3624,6 +3624,28 @@ input, select, textarea {
 			border-bottom: solid 1px rgba(212, 212, 255, 0.1);
 		}
 
+/* Updates */
+	#one {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		
+		.inner {
+			display: flex;
+			flex-direction: row;
+			gap: 2em; 
+		
+			ul {
+				list-style: none;
+				padding: 0;
+				margin: 0;
+				font-size: 0.7em;
+				font-weight: 500;
+				letter-spacing: 0.25em;
+			}
+		}
+		}
+
 /* Contact */
 
 	#contact {
