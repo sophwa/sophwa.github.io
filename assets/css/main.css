@@ -3644,7 +3644,13 @@ input, select, textarea {
 				letter-spacing: 0.25em;
 			}
 		}
+
+		@media (max-width: 768px) {
+			.inner {
+				flex-direction: column;
+			}
 		}
+	}
 
 /* Contact */
 
