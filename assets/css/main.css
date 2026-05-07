@@ -2746,7 +2746,7 @@ input, select, textarea {
 			min-height: 23em;
 			overflow: hidden;
 			position: relative;
-			width: 40%;
+			width: 33.3333%;
 			background-color: #242943;
 		}
 
@@ -2850,8 +2850,9 @@ input, select, textarea {
 				opacity: 0;
 			}
 
+			/* Uniform 3-column grid — all tiles equal width */
 			.tiles article:nth-child(4n - 1), .tiles article:nth-child(4n - 2) {
-				width: 60%;
+				width: 33.3333%;
 			}
 
 			.tiles article:nth-child(6n - 5):before {
@@ -4025,3 +4026,101 @@ input, select, textarea {
 			opacity: 1;
 			visibility: visible;
 		}
+/* ========================================================
+   Custom additions
+   ======================================================== */
+
+/* Banner subtitle (replaces inaccessible h3 skip) */
+	#banner .banner-subtitle {
+		font-size: 1.5em;
+		font-weight: 300;
+		margin: 0 0 1em 0;
+		color: rgba(255, 255, 255, 0.8);
+	}
+
+/* About section sub-headings */
+	#one h3 {
+		font-size: 1.1em;
+		text-transform: uppercase;
+		letter-spacing: 0.1em;
+		color: rgba(212, 212, 255, 0.75);
+		margin: 1.5em 0 0.5em 0;
+	}
+
+	#one h3:first-of-type {
+		margin-top: 0;
+	}
+
+	#one ul {
+		list-style: disc;
+		padding-left: 1.5em;
+		margin-bottom: 1.5em;
+	}
+
+	#one ul li {
+		margin-bottom: 0.4em;
+	}
+
+/* Projects heading section */
+	#two-heading {
+		border-top: 0 !important;
+	}
+
+/* Keyboard focus: show visit label when tile link is focused */
+	.tiles article:focus-within .visit-label {
+		opacity: 1;
+	}
+
+	.tiles article a:focus {
+		outline: 2px solid #9bf1ff;
+		outline-offset: 3px;
+	}
+
+/* Skills section */
+	#skills {
+		background: #2e3450;
+	}
+
+	.skills-grid {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 2em;
+		margin-top: 0.5em;
+	}
+
+	.skill-group {
+		flex: 1 1 200px;
+	}
+
+	.skill-group h3 {
+		font-size: 1em;
+		text-transform: uppercase;
+		letter-spacing: 0.1em;
+		color: rgba(212, 212, 255, 0.75);
+		margin-bottom: 0.75em;
+	}
+
+	.skill-list {
+		list-style: none;
+		padding: 0;
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.5em;
+	}
+
+	.skill-list li {
+		background: rgba(155, 241, 255, 0.1);
+		border: 1px solid rgba(155, 241, 255, 0.25);
+		border-radius: 2em;
+		padding: 0.3em 0.9em;
+		font-size: 0.85em;
+		letter-spacing: 0.05em;
+		color: #ffffff;
+		white-space: nowrap;
+	}
+
+	@media screen and (max-width: 736px) {
+		.skills-grid {
+			flex-direction: column;
+		}
+	}
